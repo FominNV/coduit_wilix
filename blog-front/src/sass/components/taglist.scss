@@ -1,0 +1,19 @@
+.taglist {
+
+  &__elem {
+    display: inline-block;
+    @include text-format(0.8rem,400,$source-sans,$white,center,inherit);
+    padding: 0.1rem 0.6rem;
+    background-color: $gray-very-dark;
+    border-radius: 10rem;
+    margin: 0 3px 0.2rem 0;
+    line-height: 1.5;
+  }
+
+  &__button {
+    line-height: 1;
+    font-size: 1.1rem;
+    margin-right: 5px;
+  }
+}
+

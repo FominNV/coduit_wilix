@@ -1,0 +1,39 @@
+@import '../../sass/main';
+
+.Header {
+  @include block-format(_, 100%, 56px, 0, 8px 16px, $white);
+  @include flex(center);
+
+  &-content {
+    @include block-format(_, 100%, 100%);
+    @include flex(space-between);
+  }
+
+  &-logo {
+    @include text-format(1.5rem, 700, $titillium-sans, $green, left);
+    text-decoration: none;
+  }
+
+  &-navbar {
+    @include block-format(_, _, 100%);
+    @include flex();
+
+    &__link {
+      @include header-navbar-link;
+
+      &:hover {
+        color: $black;
+      }
+
+      &-active {
+        @include header-navbar-link;
+        color: $black;
+      }
+
+      &_img {
+        @include block-format(_, 26px, 26px, 0 5px 0 0);
+        border-radius: 50%;
+      }
+    }
+  }
+}

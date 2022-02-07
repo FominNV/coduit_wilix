@@ -1,0 +1,7 @@
+@import '../../../sass/main';
+
+.ArticleDate {
+  height: 16px;
+  @include text-format(0.8rem, 300, $source-sans, $gray, left);
+  @include flex(_, center);
+}

@@ -1,0 +1,10 @@
+@import '../../../sass/main';
+
+.ArticlePageTag {
+  @include block-format(_, auto, auto, 0 3px 0.2rem 0, 0.1rem 0.6rem);
+  font-size: 0.8rem;
+  @include text-format(0.8rem, 400, $source-sans, $gray-dark);
+  line-height: 1.5;
+  border: 1px solid $gray-lightfull;
+  border-radius: 10rem;
+}

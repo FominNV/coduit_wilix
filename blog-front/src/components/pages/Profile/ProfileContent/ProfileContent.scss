@@ -1,0 +1,44 @@
+@import '../../../../sass/main';
+
+.ProfileContent {
+  @include block-format(_, 100%, auto, 0, 1.5rem 0);
+  @include flex(center);
+
+  &-content {
+    @include block-format(_, 100%);
+    max-width: 920px;
+    @include flex(_, _, column);
+  }
+
+  &-navbar {
+    @include block-format(_, 100%, 42px, 0 0 -1px);
+    @include flex;
+
+    &__link {
+      @include homepage-navbar-link;
+      &:hover {
+        color: $black;
+      }
+
+      &-active {
+        @include homepage-navbar-link;
+        color: $green;
+        border-bottom: 2px solid $green;
+      }
+    }
+
+    &__tagLink {
+      @include homepage-navbar-link;
+      display: none;
+      color: $green;
+      border-bottom: 2px solid $green;
+
+      &-active {
+        @include homepage-navbar-link;
+        display: block;
+        color: $green;
+        border-bottom: 2px solid $green;
+      }
+    }
+  }
+}

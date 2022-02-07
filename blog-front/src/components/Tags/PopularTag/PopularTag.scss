@@ -1,0 +1,10 @@
+@import '../../../sass/main';
+
+.PopularTag {
+  display: inline-block;
+  @include block-format(_, auto, auto, 3px 3px 0.2rem 0, 0.09rem 0.48rem, $gray-very-dark);
+  @include text-format(0.8rem, 400, $source-sans, $white);
+  line-height: 1.5;
+  border-radius: 10rem;
+  cursor: pointer;
+}

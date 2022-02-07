@@ -1,0 +1,4 @@
+#root {
+  @include flex(_,_,column);
+  min-height: 100%;
+}

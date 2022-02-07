@@ -1,0 +1,24 @@
+@import '../../../sass/main';
+
+.FormTag {
+  @include block-format(_, auto, auto, 0 3px 0.2rem 0, 0.1rem 0.5em, $gray-very-dark);
+  @include flex(_, center);
+  border-radius: 10rem;
+
+  &-btn {
+    @include btn-reset;
+    display: inline-block;
+    @include block-format(relative, auto, auto, 0 7px 0 0);
+    top: 1px;
+    @include text-format(0.6rem, 400, $source-sans, $white);
+    line-height: 1.5;
+  }
+
+  &-text {
+    display: inline-block;
+    @include block-format(_, auto, auto);
+
+    @include text-format(0.8rem, 400, $source-sans, $white);
+    line-height: 1.5;
+  }
+}

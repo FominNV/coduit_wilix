@@ -1,0 +1,12 @@
+@import '/src/sass/main';
+
+.Editor {
+  @include block-format(_, 100%, 100%, 25px 0 0, 0);
+  @include page-min-height;
+  @include flex(center);
+
+  &-row {
+    @include block-format(_, 100%, 100%);
+    @include flex(center);
+  }
+}

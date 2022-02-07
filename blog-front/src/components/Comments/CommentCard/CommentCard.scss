@@ -1,0 +1,41 @@
+@import '../../../sass/main';
+
+.CommentCard {
+  @include block-format(relative, 100%, auto, 0 0 0.75rem);
+  max-width: 730px;
+  border-radius: 0.25rem;
+  border: 1px solid $gray-low-light;
+
+  &-content {
+    @include block-format(_, 100%, auto, 0, 1.25rem);
+    @include text-format(1rem, 400, $source-serif, $black, left);
+    line-height: 1.25;
+  }
+
+  &-panel {
+    @include block-format(_, 100%, auto, 0, 0.75rem 1.25rem, $gray-high-light);
+    @include flex(space-between, center);
+
+    &__block {
+      @include block-format(_, auto, 100%);
+      @include flex;
+
+      &_item {
+        @include block-format(_, auto, 100%, 0 5px 0 0);
+        @include flex(_, center);
+      }
+    }
+
+    &__btn {
+      @include btn-reset;
+      @include block-format(_, 11px, 16px);
+      opacity: 0.6;
+      &:hover {
+        opacity: 1;
+      }
+      &:disabled {
+        cursor: not-allowed;
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+@import '../../../sass/main';
+
+.Article {
+  @include block-format(_, 100%, 100%, 0 0 1.5rem);
+  @include page-min-height;
+  @include flex(_, center, column);
+
+  &-top {
+    @include block-format(_, 100%, auto, 0 0 2rem, 2rem 0, $black-dark);
+
+    &__row {
+      @include block-format(_, 100%, auto);
+    }
+
+    &__title {
+      @include text-format(2.8rem, 600, $source-sans, $white, left);
+      text-shadow: 0 1px 3px rgb(0, 0, 0, 30%);
+    }
+
+    &__panel {
+      @include block-format(_, 100%, auto, 2rem 0 0);
+      @include flex;
+    }
+
+    &__userBlock {
+      @include flex();
+    }
+
+    &__props {
+      margin: 0 1.5rem 0 0.3rem;
+      vertical-align: center;
+      @include flex(_, _, column);
+    }
+  }
+
+  &-content {
+    @include block-format(_, 100%, auto);
+
+    &__body {
+      @include block-format(_, 100%, auto, 0 0 2rem);
+      @include text-format(1.2rem, 400, $source-serif, $black, justify);
+      line-height: 1.8rem;
+    }
+
+    &__tag-list {
+      width: 100%;
+      @include flex;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+      padding-bottom: 15px;
+    }
+
+    &__line {
+      border: 0;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    &__panel {
+      @include block-format(_, 100%, auto, 1.5rem 0 3rem);
+      @include flex(center);
+    }
+
+    &__userBlock {
+      @include flex();
+    }
+
+    &__props {
+      margin: 0 1.5rem 0 0.3rem;
+      vertical-align: center;
+      @include flex(_, _, column);
+    }
+  }
+
+  &-bottom {
+    @include block-format(_, 100%, auto, 0, 1rem 0 0);
+    @include flex(_, center, column);
+  }
+}

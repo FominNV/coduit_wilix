@@ -1,0 +1,71 @@
+@import '../../../sass/main';
+
+.CommentForm {
+  @include block-format(_, 100%, auto, 0 0 0.75rem);
+  max-width: 730px;
+
+  &-unauthorise {
+    @include block-format(_, 100%, auto);
+    @include text-format(1rem, 400, $source-sans, $black, left);
+    line-height: 1.5;
+
+    &__link {
+      color: $green;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &-error__block {
+    @include block-format(_, 100%, auto, 0 0 0.75rem);
+  }
+
+  &-form {
+    @include block-format(_, 100%, auto);
+    border: 1px solid $gray-low-light;
+    border-radius: 0.25rem;
+  }
+
+  &-body {
+    @include inp-reset;
+    @include block-format(_, 100%, 100px, 0, 1.25rem);
+    @include text-format(1rem, 400, $source-sans, $black-light, left);
+    min-height: 40px;
+    resize: vertical;
+    &:focus {
+      border-color: $blue-light;
+    }
+    &:disabled {
+      background: $gray-light;
+      cursor: not-allowed;
+    }
+  }
+
+  &-panel {
+    @include block-format(_, 100%, auto, 0, 0.75rem 1.25rem, $gray-high-light);
+    @include flex(space-between);
+
+    &__icon {
+      @include block-format(_, 32px, 32px);
+      border-radius: 30px;
+      cursor: pointer;
+    }
+
+    &__btn {
+      @include btn-reset;
+      @include block-format(_, auto, auto, 0, 0.25rem 0.5rem, $green);
+      @include text-format(0.875rem, 700, $source-sans, $white);
+      line-height: 1.25;
+      border: 1px solid $green;
+      border-radius: 0.2rem;
+      &:hover {
+        background: $green-gray;
+      }
+      &:disabled {
+        cursor: not-allowed;
+      }
+    }
+  }
+}

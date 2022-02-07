@@ -1,0 +1,16 @@
+.form {
+
+  margin-top: 1rem;
+
+  &__input,&__textarea,&__error {
+    margin-bottom: 1rem;
+  }
+
+  &__submit {
+    margin: auto 0 auto auto;
+  }
+
+  &__logout {
+    margin: auto auto auto 0;
+  }
+}

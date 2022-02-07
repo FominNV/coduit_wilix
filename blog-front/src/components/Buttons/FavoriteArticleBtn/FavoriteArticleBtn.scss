@@ -1,0 +1,28 @@
+@import '../../../sass/main';
+
+.FavoriteArticleBtn {
+  @include btn-reset();
+  padding: 0.25rem 0.5rem;
+  @include text-format(0.875rem, 400, $source-sans, $green);
+  line-height: 1.25;
+  border: 1px solid $green;
+  border-radius: 0.2rem;
+  &:hover {
+    background: $green;
+    color: $white;
+  }
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &.favorited {
+    background: $green;
+    color: $white;
+    &:hover {
+      background: $green-gray;
+    }
+    &:disabled {
+      cursor: not-allowed;
+    }
+  }
+}

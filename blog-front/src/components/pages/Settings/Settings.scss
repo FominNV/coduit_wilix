@@ -1,0 +1,34 @@
+@import '/src/sass/main';
+
+.Settings {
+  &-body {
+    @include flex(_, center, column);
+    width: 540px;
+    padding: 1.5rem 0;
+    margin: 0 auto;
+  }
+
+  &-header {
+    @include text-format(2.5rem, 500, $source-sans, $black, _, _);
+    line-height: 1.1;
+    margin: 0 0 0.5rem 0;
+  }
+
+  &-form {
+    &__textarea {
+      height: 220px;
+    }
+
+    &__line {
+      width: 100%;
+      color: $black;
+      margin: 1rem 0;
+      line-height: 1.5;
+      border: 0;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &-logout {
+  }
+}

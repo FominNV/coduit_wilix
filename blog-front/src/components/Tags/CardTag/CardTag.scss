@@ -1,0 +1,10 @@
+@import '../../../sass/main';
+
+.CardTag {
+  @include block-format(_, auto, auto, 3px 3px 0.2rem 0, 0 0.5rem);
+  @include text-format(0.8rem, 300, $source-sans, $gray-dark);
+  line-height: 1.5;
+  border: 1px solid $gray-dark;
+  border-radius: 10rem;
+  opacity: 0.6;
+}

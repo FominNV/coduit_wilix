@@ -1,0 +1,41 @@
+@import '/src/sass/main';
+
+.Profile {
+  &-header {
+    background-color: $gray-light;
+    padding: 2rem 0 1rem;
+
+    &__body {
+      @include flex(_, center, column);
+      margin: 0 auto;
+      width: 920px;
+    }
+
+    &__logo {
+      margin-bottom: 1rem;
+    }
+
+    &__img {
+      @include block-format(_, 100px, 100px);
+      border-radius: 50%;
+    }
+
+    &__username {
+      @include text-format(1.5rem, 700, $source-sans, $black);
+      margin-bottom: 0.5rem;
+      line-height: 1.1;
+      word-break: break-all;
+    }
+
+    &__bio {
+      @include text-format(1rem, 300, $source-sans, $gray-dark);
+      margin: 0 auto 0.5rem;
+      line-height: 1.5;
+      word-break: break-all;
+    }
+
+    &__button {
+      align-self: flex-end;
+    }
+  }
+}

@@ -1,0 +1,74 @@
+@mixin flex($jc: flex-start, $ai: flex-start, $fd: row) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-direction: $fd;
+}
+
+@mixin block-format(
+  $position,
+  $width: auto,
+  $height: auto,
+  $margin: 0,
+  $padding: 0,
+  $bg: transparent
+) {
+  position: $position;
+  width: $width;
+  height: $height;
+  margin: $margin;
+  padding: $padding;
+  background: $bg;
+  box-sizing: border-box;
+}
+
+@mixin text-format(
+  $size,
+  $weight,
+  $famaly: $source-sans,
+  $color: $black,
+  $text-aligh: center,
+  $letter-spacing: inherit
+) {
+  font: $weight $size $famaly;
+  color: $color;
+  text-align: $text-aligh;
+  letter-spacing: $letter-spacing;
+}
+
+@mixin btn-reset() {
+  border: none;
+  background: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+@mixin inp-reset() {
+  border: none;
+  outline: none;
+  background: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin header-navbar-link() {
+  @include block-format(_, _, 100%, 0 0 0 16px, 6.8px 0);
+  @include text-format(1rem, 400, $source-sans, rgba(0, 0, 0, 0.3));
+  @include flex(_, center);
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+@mixin homepage-navbar-link() {
+  @include block-format(_, _, 100%, 0 3px 0 0, 0.5em 1em);
+  @include text-format(1rem, 400, $source-sans, $gray-dark);
+  line-height: 1.5rem;
+  text-decoration: none;
+}
+
+@mixin page-min-height() {
+  min-height: calc(100vh - 58px - 56px - 25px);
+}

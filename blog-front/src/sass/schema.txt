@@ -1,0 +1,29 @@
+// React-Block__Element_Item-Modify
+
+Example:
+Header-nav__item_link-active
+
+//
+
+
+//Priority:
+
+-display
+-position
+-top
+-left
+-width
+-height
+-margin
+-padding
+-flex
+-text
+-border
+-others........
+
+example:
+@btn-reset;
+@include block-format(relative, 230px, 100px);
+@include flex();
+@include text-format(1rem, 700);
+border: 1px solid $black;

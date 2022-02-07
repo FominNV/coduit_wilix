@@ -1,0 +1,7 @@
+@import '../../sass/tools/reset';
+@import '../../sass/main';
+
+.App {
+  @include flex(_, _, _);
+  flex: 1 1 auto;
+}

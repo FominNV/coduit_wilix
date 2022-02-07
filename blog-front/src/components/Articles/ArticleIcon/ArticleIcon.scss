@@ -1,0 +1,11 @@
+@import '../../../sass/main';
+
+.ArticleIcon {
+  @include block-format(_, 32px, 32px);
+  border-radius: 30px;
+  cursor: pointer;
+  &.small {
+    width: 20px;
+    height: 20px;
+  }
+}

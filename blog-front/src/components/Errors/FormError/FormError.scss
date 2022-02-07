@@ -1,0 +1,11 @@
+@import '../../../sass/main';
+
+.FormError {
+  @include block-format(_, 100%, auto, 0 0 1rem, 0 0 0 23px);
+  @include text-format(1rem, 700, $source-sans, $red, left, 0.05rem);
+  line-height: 1.5;
+  &::marker {
+    color: $red;
+    font-size: 1rem;
+  }
+}

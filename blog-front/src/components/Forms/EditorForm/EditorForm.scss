@@ -1,0 +1,105 @@
+@import '../../../sass/main';
+
+.EditorForm {
+  @include block-format(_, 100%, 100%, 0 0 1rem);
+  max-width: 920px;
+  @include flex(_, center, column);
+
+  &.disabled {
+    cursor: not-allowed;
+    z-index: 100;
+  }
+
+  &-title {
+    @include inp-reset;
+    @include block-format(_, 100%, auto, 0 0 1rem, 0.75rem 1.5rem);
+    @include text-format(1.25rem, 400, $source-sans, $black-light, left);
+    line-height: 1.25;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+
+    &:focus {
+      border-color: $blue-light;
+    }
+    &:disabled {
+      background: $gray-light;
+      cursor: not-allowed;
+    }
+  }
+
+  &-description {
+    @include inp-reset;
+    @include block-format(_, 100%, auto, 0 0 1rem, 0.5rem 0.75rem);
+    @include text-format(1rem, 400, $source-sans, $black-light, left);
+    line-height: 1.25;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+    &:focus {
+      border-color: $blue-light;
+    }
+    &:disabled {
+      background: $gray-light;
+      cursor: not-allowed;
+    }
+  }
+
+  &-body {
+    @include inp-reset;
+    @include block-format(_, 100%, 180px, 0 0 1rem, 0.5rem 0.75rem);
+    resize: vertical;
+    min-height: 50px;
+    @include text-format(1rem, 400, $source-sans, $black-light, left);
+    line-height: 1.25;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+    &:focus {
+      border-color: $blue-light;
+    }
+    &:disabled {
+      background: $gray-light;
+      cursor: not-allowed;
+    }
+  }
+
+  &-tags {
+    @include inp-reset;
+    @include block-format(_, 100%, auto, 0, 0.5rem 0.75rem);
+    @include text-format(1rem, 400, $source-sans, $black-light, left);
+    line-height: 1.25;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+    &:focus {
+      border-color: $blue-light;
+    }
+    &:disabled {
+      background: $gray-light;
+      cursor: not-allowed;
+    }
+  }
+
+  &-tag-list {
+    @include block-format(_, 100%, auto, 0.1rem 0 0);
+    @include flex();
+    flex-wrap: wrap;
+  }
+
+  &-bottom {
+    @include block-format(_, 100%, auto, 1rem 0);
+    @include flex(flex-end);
+  }
+
+  &-button {
+    @include btn-reset;
+    @include block-format(_, auto, auto, 0, 0.75rem 1.5rem, $green);
+    @include text-format(1.25rem, 400, $source-sans, $white);
+    line-height: 1.25;
+    border: 1px solid $green;
+    border-radius: 0.3rem;
+    &:hover {
+      background: $green-gray;
+    }
+    &:disabled {
+      cursor: not-allowed;
+    }
+  }
+}

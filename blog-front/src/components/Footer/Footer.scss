@@ -1,0 +1,37 @@
+@import '../../sass/main';
+
+.Footer {
+  @include block-format(_, 100%, 58px, 0, 8px 16px, $gray-light);
+  @include flex(center);
+
+  &-content {
+    @include block-format(_, 100%, 100%);
+    @include flex(_, center);
+  }
+
+  &-logo {
+    @include text-format(16px, 700, $titillium-sans, $green);
+    text-decoration: none;
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+      color: $green-dark;
+    }
+  }
+
+  &-text {
+    margin-left: 10px;
+    @include text-format(13px, 400, $source-sans, $gray);
+
+    a {
+      text-decoration: none;
+      @include text-format(13px, 400, $source-sans, $green);
+
+      &:hover {
+        text-decoration: underline;
+        color: $green-dark;
+      }
+    }
+  }
+}

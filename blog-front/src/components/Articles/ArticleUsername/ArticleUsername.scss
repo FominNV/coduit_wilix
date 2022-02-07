@@ -1,0 +1,17 @@
+@import '../../../sass/main';
+
+.ArticleUsername {
+  height: 16px;
+  @include text-format(1rem, 300, $source-sans, $green, left);
+  @include flex(_, center);
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+  &.white {
+    color: $white;
+  }
+  &.small {
+    font-size: 0.8rem;
+  }
+}
